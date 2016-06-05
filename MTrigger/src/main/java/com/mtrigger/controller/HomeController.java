@@ -15,13 +15,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 	
-	public static String message = null;
+	public static String title = null;
 
 	@RequestMapping("/dashboard")
 	public ModelAndView redirectDashboard(){
-		message="Welcome to Mtrigger dashboard";
+		title="Dashboard";
 		System.out.println("redirectDashboard from controller");
-		return new ModelAndView("dashboard","message",message);
+		return new ModelAndView("dashboard","title",title);
 		
 	}
 }
